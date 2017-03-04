@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
-  get 'clients/index'
-  resources :clients
+  get 'students/index'
 
+  get 'humans/index'
+
+  get 'clients/index'
+  
+  resources :clients
+  resources :humans
   resources :customers
+  resources :students
+  
   get 'customers/index'
   root 'customers#index'
 

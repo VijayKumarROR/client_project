@@ -1,0 +1,66 @@
+<% if @company.errors.any? %>
+<div id="error_explanation">
+          <h2><%= pluralize(@company.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% @company.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+<div class="container1">
+	<div class="row1">
+		<%= form_for @company do |cu| %>
+			<div class="form-group1">
+
+				<div class="col-md-3">
+					<%= cu.label :company_name %>
+				</div>
+
+				<div class="col-md-3">
+					<%= cu.text_field :company_name %>
+				</div>
+
+				<div class="col-md-3">
+					<%= cu.label :manager_name %>
+				</div>
+
+				<div class="col-md-3">
+					<%= cu.text_field :manager_name %>
+				</div>
+
+
+				<div class="col-md-3">
+					<%= cu.label :no_of_employees %>
+				</div>
+
+				<div class="col-md-3">
+					<%= cu.text_field :no_of_employees %>
+				</div>
+
+				<div class="col-md-3">
+					<%= cu.label :location %>
+				</div>
+
+				<div class="col-md-3">
+					<%= cu.text_field :location %>
+				</div>
+
+				<div class="col-md-3">
+					<%= cu.label :no_of_branch %>
+				</div>
+
+				<div class="col-md-3">
+					<%= cu.text_field :no_of_branch %>
+				</div>
+
+				<div class="btn btn-primary">
+					<% cu.submit "Create Company"%>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
+
+<%= link_to '<button type="button">Go Back For Creating Employees</button>'.html_safe, root_path %>

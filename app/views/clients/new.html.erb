@@ -1,6 +1,39 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+
+<% if @client.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@client.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% @client.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+
+<div class="client_form">
+	<button id="one" class="btn btn-primary">New Client</button>
+</div>
+
+<div class="close_client">
+	<button id="two" class="btn btn-primary">Hide</button>
+</div>
+
+<!-- <div class="customer_form">
+<button id="three" class="btn btn-primary">New Customer</button>
+</div>
+
+<div class="close_customer">
+	<button id="four" class="btn btn-primary">Hide</button>
+</div>
+ -->
+
 <div class="container">
 	<div class="row">
-	<%= form_for :client do |c| %>
+	<%= form_for @client do |c| %>
 		<div class="control-flow">
 			
             <div class="col-md-4">
@@ -73,4 +106,19 @@
 	</div>
 </div>
 
+<%= link_to '<button type="button">Go Back for creating Company</button>'.html_safe, root_path%>
 
+
+
+
+<script>
+$(document).ready(function(){
+    $("#two").click(function(){
+        $(".container").hide();
+    });
+    $("#one").click(function(){
+        $(".container").show();
+    });
+});
+
+</script>

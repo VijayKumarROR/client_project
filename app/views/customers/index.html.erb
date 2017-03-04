@@ -1,9 +1,11 @@
 
 <nav class="navbar navbar-inverse">
-  <div class="col-sm-3"><%= link_to "About Client", :controller => "clients", :action => "index"%></div>
-  <div class="col-sm-3"><%= link_to "Project Creation", :controller => "clients", :action => "new"%></div>
-  <div class="col-sm-3"><%= link_to "Sending Project"%></div>
-  <div class="col-sm-3"><%= link_to "List of Project" %></div>
+  <div class="col-sm-2"><%= link_to "About Client", :controller => "clients", :action => "index"%></div>
+  <div class="col-sm-2"><%= link_to "Project Creation", :controller => "clients", :action => "new"%></div>
+  <div class="col-sm-2"><%= link_to "Company Creation",:controller => "customers", :action => "new"%></div>
+  <div class="col-sm-2"><%= link_to "Employee Creation", :controller => "students",:action => "new"%></div>
+  <div class="col-sm-2"><%= link_to "Human Resource", :controller => "humans", :action => "new"%></div>
+  <div class="col-sm-2"><%= link_to "List of Project" %></div>
 
 </nav>
 

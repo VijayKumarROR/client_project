@@ -1,0 +1,73 @@
+	<div class="row">
+		<div class="container">
+		<%= form_for @student do |s| %>
+			
+			<div class="col-md4">
+				<%= s.label :name %>
+			</div>
+
+			<div class="col-md-8">
+				<%= s.text_field :name %>
+			</div>
+
+
+			<div class="col-md-4">
+				<%= s.label :resume_headline %>
+			</div>
+
+			<div class="col-md-8">
+				<%= s.text_field :resume_headline %>
+			</div>
+
+			<div class="col-md-4">
+				<%= s.label :email %>
+			</div>
+
+  			<div class="col-md-8">
+				<%= s.text_field :email%>
+			</div>
+
+			<div class="col-md-4">
+				<%= s.label :phone_number %>
+			</div>
+
+  			<div class="col-md-8">
+				<%= s.text_field :phone_number %>
+			</div>
+
+			<div class="col-md-4">
+				<%= s.label :designation %>
+			</div>
+
+			<div class="col-md-8">
+				<%= s.text_field :designation %>
+			</div>
+
+			<div class="col-md-4">
+				<%= s.label :experience %>
+			</div>
+
+  			<div class="col-md-8">
+				<%= s.text_field :experience %>
+			</div>
+
+			<div class="col-md-4">
+				<%= s.label :location %>
+			</div>
+
+  			<div class="col-md-8">
+				<%= s.text_field :location %>
+			</div>
+
+			<div class="col-md-4">
+				<%= s.label :key_skills %>
+			</div>
+
+  			<div class="col-md-8">
+				<%= s.text_field :key_skills %>
+			</div>
+			<% end %>
+
+			</div>
+		</div>
+	</div>
