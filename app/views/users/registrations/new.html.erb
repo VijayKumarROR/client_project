@@ -1,0 +1,71 @@
+<link rel="stylesheet" type="text/css" href="../../../stylesheets/style.css">
+<%= link_to "Customer", customers_path %>
+<h2 align="center" style="color:green" class="sign">Sign up</h2>
+<div class="row">
+  <div class="container">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+   <div class="col-sm-12">  
+    <div class="la"><%= f.label :first_name %><br /></div>
+    <%= f.text_field :first_name, autofocus: true %>
+   </div>
+
+  <div class="col-sm-12">
+  <%= f.label :last_name %><br />
+  <%= f.text_field :last_name, autofocus: true %>
+  </div>
+
+  <div class="col-sm-12">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+
+  <div class="col-sm-12">
+  <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em><%= @minimum_password_length %> character minimum </em>
+    <% end %><br />
+  <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="col-sm-12">
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up"%>
+  </div>
+<% end %>
+
+<%= render "users/shared/links" %>
+</div>
+</div>
+
+<!-- <style type="text/css">
+
+.row
+{
+  background-color: #1be1e8;
+  border: ridge 3px grey;
+  width:400px;
+  margin: auto;
+  color: green;
+  margin-top: 30px;
+  padding: 20px;
+}  
+.actions
+{
+  text-align: left;
+}
+
+.container
+{
+  padding: 20px;
+  margin-left: 50px;
+}
+
+</style>
+ -->

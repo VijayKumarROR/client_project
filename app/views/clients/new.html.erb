@@ -1,0 +1,76 @@
+<div class="container">
+	<div class="row">
+	<%= form_for :client do |c| %>
+		<div class="control-flow">
+			
+            <div class="col-md-4">
+				<label for="project">Client Name</label>
+			</div>
+			
+			<div class="col-md-8">
+				<%= c.text_field :client_name %>
+			</div>
+
+
+			<div class="col-md-4">
+				<label for="project">Project Name</label>
+			</div>
+			
+			<div class="col-md-8">
+				<%= c.text_field :project_name %>
+			</div>
+		
+			<div class="col-md-4">
+				<label for="description">Description</label>
+			</div>
+
+			<div class="col-md-8">
+				<%= c.text_area :description %>
+			</div>
+
+			<div class="col-md-4">
+				<label for="day">Days Allocated</label>
+			</div>
+
+			<div class="col-md-8">
+				<%= c.text_field :time %>
+			</div>
+
+			<div class="col-md-4">
+				<label for="project">Set Rate</label>
+			</div>
+			
+			<div class="col-md-8">
+				<%= c.text_field :set_rate %>
+			</div>
+
+			<div class="col-md-4">
+				<label for="project">Team Members</label>
+			</div>
+			
+			<div class="col-md-8">
+				<%= c.text_field :team_member %>
+			</div>
+
+
+			<div class="label_field_pair">
+        	<label class="label_for_employee_gender" for="master_student_gender">Status</label>
+        	<div class="employee_gender_value">
+          	<label class="label_for_status" for="add_grade_status_true">Active</label>
+          	<%= c.radio_button  "status", "true", :checked => "checked" %>
+
+          	<label class="label_for_status" for="add_grade_status_false">Inactive</label>
+          	<%= c.radio_button  "status", "false" %>
+        	</div>
+      		</div>
+
+      		<div class="btn btn-primary">
+      			<%= c.submit "create Project"%>
+      		</div>
+
+		</div>
+		<% end %>
+	</div>
+</div>
+
+
